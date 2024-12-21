@@ -12,3 +12,7 @@ alias t := test
 
 test day year:
     cargo t -p y{{year}}-d{{day}}
+
+[no-cd]
+submit part answer:
+    day=$(basename $(pwd) | cut -c2-3) && year=$(basename $(dirname $(pwd)) | cut -c2-5) && aoc submit -d $day -y $year {{part}} {{answer}}
