@@ -1,0 +1,8 @@
+[package]
+name = "y2015-d04"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aoc_utils = { workspace = true }
+md5 = "0.7.0"
