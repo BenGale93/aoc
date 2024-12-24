@@ -805,6 +805,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "y2015-d06"
+version = "0.1.0"
+dependencies = [
+ "aoc_utils",
+ "regex",
+]
+
+[[package]]
 name = "y2023-d01"
 version = "0.1.0"
 dependencies = [
