@@ -1,0 +1,8 @@
+[package]
+name = "y2015-d10"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aoc_utils = { workspace = true }
+rstest = "0.23.0"
