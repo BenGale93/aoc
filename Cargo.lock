@@ -76,6 +76,7 @@ name = "aoc_utils"
 version = "0.1.0"
 dependencies = [
  "clap",
+ "regex",
 ]
 
 [[package]]
@@ -1002,6 +1003,14 @@ dependencies = [
 
 [[package]]
 name = "y2015-d14"
+version = "0.1.0"
+dependencies = [
+ "aoc_utils",
+ "regex",
+]
+
+[[package]]
+name = "y2015-d15"
 version = "0.1.0"
 dependencies = [
  "aoc_utils",
