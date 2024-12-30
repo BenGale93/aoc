@@ -87,3 +87,15 @@ impl Direction {
         }
     }
 }
+
+pub trait FromRegex {
+    fn from_regex(line: &str, re: &regex::Regex) -> Self;
+}
+
+pub fn parse_with_regex<P: AsRef<Path>, T: FromRegex>(input: P, re: regex::Regex) -> Vec<T> {
+    let lines = puzzle_input_lines(input);
+    lines
+        .into_iter()
+        .map(|l| T::from_regex(&l.unwrap(), &re))
+        .collect()
+}

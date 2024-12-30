@@ -1,4 +1,4 @@
-use aoc_utils::puzzle_input_lines;
+use aoc_utils::{FromRegex, parse_with_regex};
 use regex::Regex;
 
 #[derive(Debug, Clone, Copy)]
@@ -49,14 +49,26 @@ impl Reindeer {
     }
 }
 
+impl FromRegex for Reindeer {
+    fn from_regex(line: &str, re: &regex::Regex) -> Self {
+        let capture = re.captures(line).unwrap();
+
+        Reindeer {
+            speed: capture.get(1).unwrap().as_str().parse().unwrap(),
+            fly: capture.get(2).unwrap().as_str().parse().unwrap(),
+            rest: capture.get(3).unwrap().as_str().parse().unwrap(),
+            distance: 0,
+            status: Status::Fly,
+            tick: 0,
+            score: 0,
+        }
+    }
+}
+
 fn main() {
-    let lines = puzzle_input_lines("input");
     let re = Regex::new(r"(\d*)\D*(\d*) seconds, but then must rest for (\d*)").unwrap();
 
-    let mut reindeers: Vec<Reindeer> = lines
-        .into_iter()
-        .map(|l| parse_line(&l.unwrap(), &re))
-        .collect();
+    let mut reindeers: Vec<Reindeer> = parse_with_regex("input", re);
 
     for _ in 0..2503 {
         for reindeer in &mut reindeers {
@@ -75,20 +87,6 @@ fn main() {
 
     println!("Top distance: {top_distance}");
     println!("Top score: {top_score}");
-}
-
-fn parse_line(line: &str, re: &Regex) -> Reindeer {
-    let capture = re.captures(line).unwrap();
-
-    Reindeer {
-        speed: capture.get(1).unwrap().as_str().parse().unwrap(),
-        fly: capture.get(2).unwrap().as_str().parse().unwrap(),
-        rest: capture.get(3).unwrap().as_str().parse().unwrap(),
-        distance: 0,
-        status: Status::Fly,
-        tick: 0,
-        score: 0,
-    }
 }
 
 #[cfg(test)]
