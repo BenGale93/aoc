@@ -24,7 +24,7 @@ pub type PuzzleLines = Lines<BufReader<File>>;
 
 #[allow(clippy::missing_panics_doc)]
 pub fn puzzle_input_lines<P: AsRef<Path>>(input: P) -> PuzzleLines {
-    let file = File::open(input).expect("Could not find file {input}");
+    let file = File::open(input).expect("Could not find file");
     let reader = BufReader::new(file);
     reader.lines()
 }
