@@ -1,0 +1,8 @@
+[package]
+name = "y2015-d19"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aoc_utils = { workspace = true }
+rand = "0.8.5"
