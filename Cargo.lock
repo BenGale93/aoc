@@ -705,6 +705,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "rstest"
+version = "0.24.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "03e905296805ab93e13c1ec3a03f4b6c4f35e9498a3d5fa96dc626d22c03cd89"
+dependencies = [
+ "futures-timer",
+ "futures-util",
+ "rstest_macros 0.24.0",
+ "rustc_version",
+]
+
+[[package]]
 name = "rstest_macros"
 version = "0.18.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -726,6 +738,24 @@ name = "rstest_macros"
 version = "0.23.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "825ea780781b15345a146be27eaefb05085e337e869bff01b4306a4fd4a9ad5a"
+dependencies = [
+ "cfg-if",
+ "glob",
+ "proc-macro-crate",
+ "proc-macro2",
+ "quote",
+ "regex",
+ "relative-path",
+ "rustc_version",
+ "syn 2.0.90",
+ "unicode-ident",
+]
+
+[[package]]
+name = "rstest_macros"
+version = "0.24.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ef0053bbffce09062bee4bcc499b0fbe7a57b879f1efe088d6d8d4c7adcdef9b"
 dependencies = [
  "cfg-if",
  "glob",
@@ -1100,6 +1130,14 @@ version = "0.1.0"
 dependencies = [
  "aoc_utils",
  "rand",
+]
+
+[[package]]
+name = "y2015-d20"
+version = "0.1.0"
+dependencies = [
+ "aoc_utils",
+ "rstest 0.24.0",
 ]
 
 [[package]]

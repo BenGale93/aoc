@@ -24,3 +24,15 @@ alias d := download
 [no-cd]
 download:
     day=$(basename $(pwd) | cut -c2-3) && year=$(basename $(dirname $(pwd)) | cut -c2-5) && aoc download -d $day -y $year -o
+
+alias r1 := run1
+
+[no-cd]
+run1:
+    cargo r --release
+
+alias r2 := run2
+
+[no-cd]
+run2:
+    cargo r --release -- -p
