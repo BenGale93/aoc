@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 
-members = ["aoc_utils", "y2015/d*", "y2023/d*"]
+members = ["aoc_utils", "y2015/d*", "y2016/d*", "y2023/d*"]
 
 [workspace.dependencies]
 aoc_utils = { path = "aoc_utils/" }
