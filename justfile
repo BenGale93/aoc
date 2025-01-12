@@ -1,6 +1,6 @@
 alias n := new
 
-new day year:
+new year day:
     cargo new y{{year}}/d{{day}} --name y{{year}}-d{{day}}
     cd y{{year}}/d{{day}} && aoc download --day {{day}} --year {{year}}
     echo 'aoc_utils = { workspace = true }' >> y{{year}}/d{{day}}/Cargo.toml
@@ -10,7 +10,7 @@ lint day:
 
 alias t := test
 
-test day year:
+test year day:
     cargo t -p y{{year}}-d{{day}}
 
 alias s := submit
