@@ -1,0 +1,9 @@
+[package]
+name = "y2016-d07"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aoc_utils = { workspace = true }
+itertools = "0.14.0"
+rstest = "0.24.0"
