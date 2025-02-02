@@ -1,0 +1,10 @@
+[package]
+name = "y2016-d14"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aoc_utils = { workspace = true }
+itertools = "0.14.0"
+md5 = "0.7.0"
+memoize = "0.5.1"
