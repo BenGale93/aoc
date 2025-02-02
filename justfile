@@ -36,3 +36,8 @@ alias r2 := run2
 [no-cd]
 run2:
     cargo r --release -- -p
+
+[no-cd]
+done:
+    git add -A
+    day=$(basename $(pwd) | cut -c2-3) && year=$(basename $(dirname $(pwd)) | cut -c2-5) && git commit -m "Completed $year d$day"
