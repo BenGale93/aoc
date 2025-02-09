@@ -1328,6 +1328,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "y2016-d17"
+version = "0.1.0"
+dependencies = [
+ "aoc_utils",
+ "md5",
+]
+
+[[package]]
 name = "y2023-d01"
 version = "0.1.0"
 dependencies = [
